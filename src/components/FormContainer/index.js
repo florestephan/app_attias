@@ -1,9 +1,7 @@
 import * as React from "react";
 import './styles.scss';
 
-
-
-import FormItem from "../FormItem/index";
+import FormChoice from "../FormChoice/index";
 import {ModelsForm} from "../../data/ModelsForm";
 
 class FormContainer extends React.Component {
@@ -19,12 +17,7 @@ class FormContainer extends React.Component {
       <div>
 
         {this.state.forms.map((form, index) => {
-          return <FormItem
-            key={index}
-            name={form.libelle}
-
-          />
-
+          return <FormChoice key={index} id={form.id}/>
         })}
 
       </div>

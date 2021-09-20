@@ -1,11 +1,17 @@
 import * as React from "react";
 import './styles.scss';
 
-function FormItem(props) {
-  return <div className="form">
-    <h1>{props.name}</h1>
+const FormItem = () => (
+  <div>
+    <form>
+      <label>
+        Nom :
+        <input type="text" name="name"/>
+      </label>
+      <input type="submit" value="Envoyer"/>
+    </form>
   </div>
-}
 
+);
 
 export default FormItem
