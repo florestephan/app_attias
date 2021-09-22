@@ -9,35 +9,49 @@ class FormItem extends React.Component {
     super(props);
     this.state = {
       nom: '',
-      select: ''
+      select: 'job1'
     }
+
     this.handleChange = this.handleChange.bind(this)
+    this.handleSubmit = this.handleSubmit.bind(this);
+
 
   }
 
   // Permet de changer le state du champs
   handleChange(e) {
     this.setState({[e.target.name]: e.target.value})
-    console.log(this.state)
+  }
+
+  //Permet de renvoyer les résultat apres le submit
+  handleSubmit(event) {
+    console.log('Le nom est ' + this.state.nom +' Le métier est ' + this.state.select);
+    event.preventDefault();
   }
 
   render() {
     return (
-      <div className="form">
+      <form onSubmit={this.handleSubmit}>
+        <div className="form">
 
-        <div className="form__name">
-          <label htmlFor="nom">Votre nom</label>
-          <input type="text" id="nom" name="nom" onChange={this.handleChange}/>
-        </div>
+          <div className="form__name">
+            <label htmlFor="nom">Votre nom</label>
+            <input type="text" id="nom" name="nom" onChange={this.handleChange}/>
+          </div>
 
-        <div className="form__select">
-          <select id="select" name="select" onChange={this.handleChange}>
-            <option value="job1">Métier 1</option>
-            <option value="job2">Métier 2</option>
-            <option value="job3">Métier 3</option>
-          </select>
+          <div className="form__select">
+            <label htmlFor="select">Veuillex choisir votre metier </label>
+            <select value={this.state.select} name="select" onChange={this.handleChange}>
+              <option value="job1">Métier 1</option>
+              <option value="job2">Métier 2</option>
+              <option value="job3">Métier 3</option>
+            </select>
+          </div>
+
+          <input type="submit" value="Envoyer" className="form__submit"/>
+
         </div>
-      </div>
+      </form>
     );
   }
 
