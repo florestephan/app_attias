@@ -1,0 +1,17 @@
+
+.form {
+  margin-top: 5rem;
+
+  .form__name {
+    text-align: center;
+
+    input {
+      margin-left: 1rem;
+    }
+  }
+
+  .form__select {
+    text-align: center;
+    margin-top: 1rem;
+  }
+}

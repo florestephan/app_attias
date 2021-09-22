@@ -4,7 +4,7 @@ import FormItem from "../FormItem";
 
 const FormChoice = (props) => (
   <div className={"form"}>
-    <a href={""} onClick={}> <h1>Questionnaire numéro {props.id}</h1></a>
+    <a href={""}><h1>Questionnaire numéro {props.id}</h1></a>
   </div>
 );
 
