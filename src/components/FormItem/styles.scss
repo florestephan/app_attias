@@ -1,12 +1,38 @@
-
 .form {
 
   .title__h1 {
     text-align: center;
   }
 
-  .form__name {
+  .form__lastname {
     text-align: center;
+
+    input {
+      margin-left: 1rem;
+    }
+  }
+
+  .form__firstname {
+    text-align: center;
+    margin-top: 1rem;
+
+    input {
+      margin-left: 1rem;
+    }
+  }
+
+  .form__dob {
+    text-align: center;
+    margin-top: 1rem;
+
+    input {
+      margin-left: 1rem;
+    }
+  }
+
+  .form__gender {
+    text-align: center;
+    margin-top: 1rem;
 
     input {
       margin-left: 1rem;
