@@ -1,10 +1,18 @@
 .form {
 
-  .title__h1 {
+  .header__h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .header__h2 {
+    margin-top: 2em;
+    font-size: 1.5rem;
     text-align: center;
   }
 
   .form__lastname {
+    margin-top: 2em;
     text-align: center;
 
     input {
@@ -154,7 +162,7 @@
 
   .form__submit {
     margin-left: 50vw;
-    margin-top: 10vh;
+    margin-top: 5vh;
   }
 
 }

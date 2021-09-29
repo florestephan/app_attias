@@ -14,7 +14,10 @@ class FormContainer extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="content">
+        <header className="header">
+          <h2 className="header__h2">Chaques questionnaires est à remplir obligatoirement</h2>
+        </header>
 
         {this.state.forms.map((form, index) => {
           return <FormChoice key={index} id={form.id}/>

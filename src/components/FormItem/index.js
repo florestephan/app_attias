@@ -1,6 +1,7 @@
 import * as React from "react";
 import './styles.scss';
 
+
 class FormItem extends React.Component {
 
   //On définit le component FormItem ainsi que les props
@@ -38,8 +39,6 @@ class FormItem extends React.Component {
 
   //Permet de renvoyer les résultat apres le submit
   handleSubmit(event) {
-    console.log('Le Nom est ' + this.state.lastname + ' Le métier est ' + this.state.select + ' Le prénom est ' + this.state.firstname + ' La dob est ' + this.state.dob +
-      ' le genre est ' + this.state.gender);
     event.preventDefault();
   }
 
@@ -48,7 +47,11 @@ class FormItem extends React.Component {
 
       <form className="form" onSubmit={this.handleSubmit}>
 
-        <h1 className="title__h1">Informations générales</h1>
+        <header className="header">
+          <h1 className="header__h1">Questionnaire salle d'attente</h1>
+          <h2 className="header__h2">Informations générales</h2>
+
+        </header>
 
 
         <div className="form__lastname">
