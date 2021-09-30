@@ -1,8 +1,168 @@
-@use './src/styles/index';
+.form {
 
-.content {
-
-  .header__h2 {
+  .header__h1 {
+    font-size: 2rem;
     text-align: center;
   }
+
+  .header__h2 {
+    margin-top: 2em;
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .form__lastname {
+    margin-top: 2em;
+    text-align: center;
+
+    input {
+      margin-left: 1rem;
+    }
+  }
+
+  .form__firstname {
+    text-align: center;
+    margin-top: 1rem;
+
+    input {
+      margin-left: 1rem;
+    }
+  }
+
+  .form__dob {
+    text-align: center;
+    margin-top: 1rem;
+
+    input {
+      margin-left: 1rem;
+    }
+  }
+
+  .form__gender {
+    text-align: center;
+    margin-top: 1rem;
+
+    input {
+      margin-left: 1rem;
+    }
+  }
+
+  .form__tabac {
+    text-align: center;
+    margin-top: 1rem;
+
+    input {
+      margin-left: 1rem;
+    }
+  }
+
+  .form__sleep {
+    text-align: center;
+    margin-top: 1rem;
+
+    input {
+      margin-left: 1rem;
+    }
+  }
+
+  .form__job {
+    text-align: center;
+    margin-top: 1rem;
+
+    input {
+      margin-left: 1rem;
+    }
+  }
+
+  .form__snore {
+    text-align: center;
+    margin-top: 1rem;
+
+    input {
+      margin-left: 1rem;
+    }
+  }
+
+  .form__headache {
+    text-align: center;
+    margin-top: 1rem;
+
+    input {
+      margin-left: 1rem;
+    }
+  }
+
+  .form__breathingPause {
+    text-align: center;
+    margin-top: 1rem;
+
+    input {
+      margin-left: 1rem;
+    }
+  }
+
+  .form__urinate {
+    text-align: center;
+    margin-top: 1rem;
+
+    input {
+      margin-left: 1rem;
+    }
+  }
+
+  .form__focusMemory {
+    text-align: center;
+    margin-top: 1rem;
+
+    input {
+      margin-left: 1rem;
+    }
+  }
+
+  .form__techy {
+    text-align: center;
+    margin-top: 1rem;
+
+    input {
+      margin-left: 1rem;
+    }
+  }
+
+  .form__restfulSleep {
+    text-align: center;
+    margin-top: 1rem;
+
+    input {
+      margin-left: 1rem;
+    }
+  }
+
+  .form__drivingDrowsiness {
+    text-align: center;
+    margin-top: 1rem;
+
+    input {
+      margin-left: 1rem;
+    }
+  }
+
+  .form__accidentDueToDrowsiness {
+    text-align: center;
+    margin-top: 1rem;
+
+    input {
+      margin-left: 1rem;
+    }
+  }
+
+  .form__select {
+    text-align: center;
+    margin-top: 1rem;
+  }
+
+  .form__submit {
+    margin-left: 50vw;
+    margin-top: 5vh;
+  }
+
 }
