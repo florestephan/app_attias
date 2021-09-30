@@ -1,32 +1,27 @@
 import * as React from "react";
 import './styles.scss';
+import Button from '@mui/material/Button';
 
-import FormChoice from "../FormChoice/index";
-import {ModelsForm} from "../../data/ModelsForm";
 
-class Form1 extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      forms: ModelsForm
-    };
-  }
+class FormGeneral extends React.Component {
+
+  continue = e => {
+    e.preventDefault();
+    this.props.nextstep()
+  };
 
   render() {
+
     return (
-      <div className="content">
-        <header className="header">
-          <h2 className="header__h2">Chaques questionnaires est à remplir obligatoirement</h2>
-        </header>
-
-        {this.state.forms.map((form, index) => {
-          return <FormChoice key={index} id={form.id}/>
-        })}
-
-      </div>
+      <Button
+        color="primary"
+        variant="contained"
+        onClick={this.continue}
+      >Continue
+      </Button>
     );
   }
 }
 
 
-export default Form1
+export default FormGeneral
