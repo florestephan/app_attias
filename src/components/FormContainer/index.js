@@ -28,22 +28,21 @@ class FormContainer extends React.Component {
       accident_endormissement_volant: ''
     }
 
-    this.handleChange = this.handleChange.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this);
 
   }
 
   nextStep = () => {
-    const { step } = this.state;
+    const {step} = this.state;
     this.setState({
       step: step + 1
     });
   };
 
   // Permet de changer le state du champs
-  handleChange(e) {
-    this.setState({[e.target.name]: e.target.value})
-  }
+  handleChange = input => e => {
+    this.setState({[input]: e.target.value});
+  };
 
   //Permet de renvoyer les résultat apres le submit
   handleSubmit(event) {
@@ -52,8 +51,8 @@ class FormContainer extends React.Component {
 
   render() {
     const {step} = this.state;
-    const {nom_de_famille, prenom} = this.state;
-    const values = {nom_de_famille, prenom, };
+    const {nom_de_famille, prenom, date_de_naissance, sexe} = this.state;
+    const values = {nom_de_famille, prenom, date_de_naissance, sexe};
 
     switch (step) {
       case 1:
