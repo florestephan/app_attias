@@ -16,8 +16,7 @@ class FormContainer extends React.Component {
       date_de_naissance: '',
       sexe: '',
       tabac: '',
-      "dormir_seul(e)": '',
-      metier: '',
+      "dormir_seul": '',
       ronflement: '',
       pause_respiratoire: '',
       uriner_nuit: '',
@@ -51,8 +50,31 @@ class FormContainer extends React.Component {
 
   render() {
     const {step} = this.state;
-    const {nom_de_famille, prenom, date_de_naissance, sexe} = this.state;
-    const values = {nom_de_famille, prenom, date_de_naissance, sexe};
+    const {
+      nom_de_famille,
+      prenom,
+      date_de_naissance,
+      sexe,
+      tabac,
+      dormir_seul,
+      job,
+      ronflement,
+      maux_de_tete, pause_respiratoire,
+      uriner_nuit, probleme_memoire, irritable, sommeil_reparateur, somnolance_volant, accident_endormissement_volant
+    } = this.state;
+    const values = {
+      nom_de_famille,
+      prenom,
+      date_de_naissance,
+      sexe,
+      tabac,
+      dormir_seul,
+      job,
+      ronflement,
+      maux_de_tete,
+      pause_respiratoire,
+      uriner_nuit, probleme_memoire, irritable, sommeil_reparateur, somnolance_volant, accident_endormissement_volant
+    };
 
     switch (step) {
       case 1:
