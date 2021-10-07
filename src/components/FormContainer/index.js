@@ -1,6 +1,7 @@
 import * as React from "react";
 import './styles.scss';
 import FormGeneral from "../FormGeneral";
+import Form1 from "../Form1";
 
 
 class FormContainer extends React.Component {
@@ -35,6 +36,13 @@ class FormContainer extends React.Component {
     const {step} = this.state;
     this.setState({
       step: step + 1
+    });
+  };
+
+  backStep = () => {
+    const {step} = this.state;
+    this.setState({
+      step: step - 1
     });
   };
 
@@ -82,7 +90,9 @@ class FormContainer extends React.Component {
           <FormGeneral nextstep={this.nextStep} handleChange={this.handleChange} values={values}/>
         );
       case 2:
-        return (<h1>Form1</h1>);
+        return (
+          <Form1 nexstep={this.nextStep} backstep={this.backStep} handleChange={this.handleChange} values={values}/>
+        );
 
       case 3:
         return (<h1>Form2</h1>);
