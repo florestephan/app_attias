@@ -25,7 +25,15 @@ class FormContainer extends React.Component {
       irritable: '',
       sommeil_reparateur: '',
       somnolance_volant: '',
-      accident_endormissement_volant: ''
+      accident_endormissement_volant: '',
+      manque_energie: '',
+      demande_un_effort: '',
+      faible_certains_endroits_du_corps: '',
+      bras_jambes_lourdes: '',
+      fatigue_sans_raison: '',
+      envie_de_se_reposer: '',
+      mal_a_me_concentrer: '',
+      fatigue_lourd_raide: ''
     }
 
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -67,8 +75,22 @@ class FormContainer extends React.Component {
       dormir_seul,
       job,
       ronflement,
-      maux_de_tete, pause_respiratoire,
-      uriner_nuit, probleme_memoire, irritable, sommeil_reparateur, somnolance_volant, accident_endormissement_volant
+      maux_de_tete,
+      pause_respiratoire,
+      uriner_nuit,
+      probleme_memoire,
+      irritable,
+      sommeil_reparateur,
+      somnolance_volant,
+      accident_endormissement_volant,
+      manque_energie,
+      demande_un_effort,
+      faible_certains_endroits_du_corps,
+      bras_jambes_lourdes,
+      fatigue_sans_raison,
+      envie_de_se_reposer,
+      mal_a_me_concentrer,
+      fatigue_lourd_raide
     } = this.state;
     const values = {
       nom_de_famille,
@@ -81,7 +103,20 @@ class FormContainer extends React.Component {
       ronflement,
       maux_de_tete,
       pause_respiratoire,
-      uriner_nuit, probleme_memoire, irritable, sommeil_reparateur, somnolance_volant, accident_endormissement_volant
+      uriner_nuit,
+      probleme_memoire,
+      irritable,
+      sommeil_reparateur,
+      somnolance_volant,
+      accident_endormissement_volant,
+      manque_energie,
+      demande_un_effort,
+      faible_certains_endroits_du_corps,
+      bras_jambes_lourdes,
+      fatigue_sans_raison,
+      envie_de_se_reposer,
+      mal_a_me_concentrer,
+      fatigue_lourd_raide
     };
 
     switch (step) {
