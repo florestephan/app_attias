@@ -2,6 +2,8 @@ import * as React from "react";
 import './styles.scss';
 import FormGeneral from "../FormGeneral";
 import Form1 from "../Form1";
+import Form2 from "../Form2";
+import Form3 from "../Form3";
 
 
 class FormContainer extends React.Component {
@@ -126,11 +128,18 @@ class FormContainer extends React.Component {
         );
       case 2:
         return (
-          <Form1 nexstep={this.nextStep} backstep={this.backStep} handleChange={this.handleChange} values={values}/>
+          <Form1 nextstep={this.nextStep} backstep={this.backStep} handleChange={this.handleChange} values={values}/>
         );
 
       case 3:
-        return (<h1>Form2</h1>);
+        return (
+          <Form2 nextstep={this.nextStep} backstep={this.backStep} handleChange={this.handleChange} values={values}/>
+        );
+
+      case 4:
+        return (
+          <Form3 nextstep={this.nextStep} backstep={this.backStep} handleChange={this.handleChange} values={values}/>
+        );
     }
 
   }
