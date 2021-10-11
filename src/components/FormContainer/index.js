@@ -19,7 +19,7 @@ class FormContainer extends React.Component {
       date_de_naissance: '',
       sexe: '',
       tabac: '',
-      "dormir_seul": '',
+      dormir_seul: '',
       ronflement: '',
       pause_respiratoire: '',
       uriner_nuit: '',
@@ -35,7 +35,8 @@ class FormContainer extends React.Component {
       fatigue_sans_raison: '',
       envie_de_se_reposer: '',
       mal_a_me_concentrer: '',
-      fatigue_lourd_raide: ''
+      fatigue_lourd_raide: '',
+      tendu_ou_enerve: ''
     }
 
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -92,7 +93,8 @@ class FormContainer extends React.Component {
       fatigue_sans_raison,
       envie_de_se_reposer,
       mal_a_me_concentrer,
-      fatigue_lourd_raide
+      fatigue_lourd_raide,
+      tendu_ou_enerve
     } = this.state;
     const values = {
       nom_de_famille,
@@ -118,7 +120,8 @@ class FormContainer extends React.Component {
       fatigue_sans_raison,
       envie_de_se_reposer,
       mal_a_me_concentrer,
-      fatigue_lourd_raide
+      fatigue_lourd_raide,
+      tendu_ou_enerve
     };
 
     switch (step) {

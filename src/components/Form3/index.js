@@ -58,15 +58,15 @@ class Form3 extends React.Component {
           <Button sx={{mr: "3rem"}}
                   color="primary"
                   variant="contained"
-                  onClick={this.continue}
-          >Continue
+                  onClick={this.back}
+          >Retour
           </Button>
 
           <Button
             color="primary"
             variant="contained"
-            onClick={this.back}
-          >Retour
+            onClick={this.continue}
+          >Continue
           </Button>
         </Box>
 
