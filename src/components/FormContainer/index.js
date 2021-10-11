@@ -36,7 +36,20 @@ class FormContainer extends React.Component {
       envie_de_se_reposer: '',
       mal_a_me_concentrer: '',
       fatigue_lourd_raide: '',
-      tendu_ou_enerve: ''
+      tendu_ou_enerve: '',
+      plaisir_aux_meme_chose_autrefois: '',
+      sensation_de_peur: '',
+      rire_facilement: '',
+      faire_du_souci: '',
+      bonne_humeur: '',
+      sentir_decontracte_a_ne_rien_faire: '',
+      fonctionner_au_ralenti: '',
+      sensation_peur_estomac_noue: '',
+      interesse_plus_a_mon_apparence: '',
+      arrive_pas_a_tenir_en_place: '',
+      rejouis_a_faire_certaines_choses: '',
+      sensation_soudaines_de_panique: '',
+      plaisir_a_lire_ou_autre: ''
     }
 
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -94,7 +107,20 @@ class FormContainer extends React.Component {
       envie_de_se_reposer,
       mal_a_me_concentrer,
       fatigue_lourd_raide,
-      tendu_ou_enerve
+      tendu_ou_enerve,
+      plaisir_aux_meme_chose_autrefois,
+      sensation_de_peur,
+      rire_facilement,
+      faire_du_souci,
+      bonne_humeur,
+      sentir_decontracte_a_ne_rien_faire,
+      fonctionner_au_ralenti,
+      sensation_peur_estomac_noue,
+      interesse_plus_a_mon_apparence,
+      arrive_pas_a_tenir_en_place,
+      rejouis_a_faire_certaines_choses,
+      sensation_soudaines_de_panique,
+      plaisir_a_lire_ou_autre
     } = this.state;
     const values = {
       nom_de_famille,
@@ -121,7 +147,20 @@ class FormContainer extends React.Component {
       envie_de_se_reposer,
       mal_a_me_concentrer,
       fatigue_lourd_raide,
-      tendu_ou_enerve
+      tendu_ou_enerve,
+      plaisir_aux_meme_chose_autrefois,
+      sensation_de_peur,
+      rire_facilement,
+      faire_du_souci,
+      bonne_humeur,
+      sentir_decontracte_a_ne_rien_faire,
+      fonctionner_au_ralenti,
+      sensation_peur_estomac_noue,
+      interesse_plus_a_mon_apparence,
+      arrive_pas_a_tenir_en_place,
+      rejouis_a_faire_certaines_choses,
+      sensation_soudaines_de_panique,
+      plaisir_a_lire_ou_autre
     };
 
     switch (step) {
