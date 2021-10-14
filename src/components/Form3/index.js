@@ -24,11 +24,13 @@ class Form3 extends React.Component {
   continue = e => {
     e.preventDefault();
     this.props.nextstep();
+    window.scrollTo({top: 0, behavior: 'smooth'})
   };
 
   back = e => {
     e.preventDefault();
     this.props.backstep();
+    window.scrollTo({top: 0, behavior: 'smooth'})
   };
 
 
@@ -194,7 +196,7 @@ class Form3 extends React.Component {
             color="primary"
             variant="contained"
             onClick={this.continue}
-          >Continue
+          >Confirmer
           </Button>
         </Box>
 

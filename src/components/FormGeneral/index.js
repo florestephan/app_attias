@@ -21,6 +21,7 @@ class FormGeneral extends React.Component {
   continue = e => {
     e.preventDefault();
     this.props.nextstep()
+    window.scrollTo({top: 0, behavior: 'smooth'})
   };
 
   render() {

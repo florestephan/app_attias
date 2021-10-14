@@ -4,6 +4,7 @@ import FormGeneral from "../FormGeneral";
 import Form1 from "../Form1";
 import Form2 from "../Form2";
 import Form3 from "../Form3";
+import FormConfirmation from "../FormConfirmation";
 
 
 class FormContainer extends React.Component {
@@ -205,6 +206,11 @@ class FormContainer extends React.Component {
       case 4:
         return (
           <Form3 nextstep={this.nextStep} backstep={this.backStep} handleChange={this.handleChange} values={values}/>
+        );
+
+      case 5:
+        return (
+          <FormConfirmation handleChange={this.handleChange} values={values}/>
         );
     }
 
