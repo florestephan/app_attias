@@ -49,7 +49,15 @@ class FormContainer extends React.Component {
       arrive_pas_a_tenir_en_place: '',
       rejouis_a_faire_certaines_choses: '',
       sensation_soudaines_de_panique: '',
-      plaisir_a_lire_ou_autre: ''
+      plaisir_a_lire_ou_autre: '',
+      assis_en_train_de_lire: '',
+      en_regardant_la_television: '',
+      inactif_dans_un_lieu_public: '',
+      passager_dans_une_voiture: '',
+      allonge_en_apres_midi: '',
+      assis_en_parlant_avec_une_personne: '',
+      assis_apres_un_dejeuner_sans_alcool: '',
+      immobilise_dans_une_voiture: ''
     }
 
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -120,7 +128,15 @@ class FormContainer extends React.Component {
       arrive_pas_a_tenir_en_place,
       rejouis_a_faire_certaines_choses,
       sensation_soudaines_de_panique,
-      plaisir_a_lire_ou_autre
+      plaisir_a_lire_ou_autre,
+      assis_en_train_de_lire,
+      en_regardant_la_television,
+      inactif_dans_un_lieu_public,
+      passager_dans_une_voiture,
+      allonge_en_apres_midi,
+      assis_en_parlant_avec_une_personne,
+      assis_apres_un_dejeuner_sans_alcool,
+      immobilise_dans_une_voiture
     } = this.state;
     const values = {
       nom_de_famille,
@@ -160,7 +176,15 @@ class FormContainer extends React.Component {
       arrive_pas_a_tenir_en_place,
       rejouis_a_faire_certaines_choses,
       sensation_soudaines_de_panique,
-      plaisir_a_lire_ou_autre
+      plaisir_a_lire_ou_autre,
+      assis_en_train_de_lire,
+      en_regardant_la_television,
+      inactif_dans_un_lieu_public,
+      passager_dans_une_voiture,
+      allonge_en_apres_midi,
+      assis_en_parlant_avec_une_personne,
+      assis_apres_un_dejeuner_sans_alcool,
+      immobilise_dans_une_voiture
     };
 
     switch (step) {
