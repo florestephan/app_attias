@@ -186,17 +186,17 @@ class Form1 extends React.Component {
         <br/>
 
         <Box textAlign='center'>
-          <Button sx={{mr: "3rem"}}
+          <Button sx={{mr: "3rem", mb: "1rem"}}
                   color="primary"
                   variant="contained"
                   onClick={this.back}
           >Retour
           </Button>
 
-          <Button
-            color="primary"
-            variant="contained"
-            onClick={this.continue}
+          <Button sx={{mb: "1rem"}}
+                  color="primary"
+                  variant="contained"
+                  onClick={this.continue}
 
           >Continue
           </Button>

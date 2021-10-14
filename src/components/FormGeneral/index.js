@@ -197,7 +197,7 @@ class FormGeneral extends React.Component {
           </RadioGroup>
 
           <Box textAlign='center'>
-            <Button
+            <Button sx={{mb: "1rem"}}
               color="primary"
               variant="contained"
               onClick={this.continue}
