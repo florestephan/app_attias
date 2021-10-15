@@ -31,7 +31,7 @@ class FormGeneral extends React.Component {
     return (
 
       <Container>
-        <form>
+        <form onSubmit={this.continue}>
           <header>
             <AppBar position="static">
               <Toolbar>
@@ -47,7 +47,7 @@ class FormGeneral extends React.Component {
 
           <TextField
             placeholder="Nom de famille"
-            type="text"
+            type="text" required={}
             name="nom_de_famille"
             onChange={handleChange('nom_de_famille')}
             defaultValue={values.nom_de_famille}
@@ -198,9 +198,9 @@ class FormGeneral extends React.Component {
 
           <Box textAlign='center'>
             <Button sx={{mb: "1rem"}}
-              color="primary"
-              variant="contained"
-              onClick={this.continue}
+                    color="primary"
+                    variant="contained"
+                    onClick={this.continue}
             >Continue
             </Button>
 
