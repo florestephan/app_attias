@@ -47,7 +47,7 @@ class FormGeneral extends React.Component {
 
           <TextField
             placeholder="Nom de famille"
-            type="text" required={}
+            type="text"
             name="nom_de_famille"
             onChange={handleChange('nom_de_famille')}
             defaultValue={values.nom_de_famille}
