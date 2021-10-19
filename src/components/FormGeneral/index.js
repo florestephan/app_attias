@@ -57,6 +57,7 @@ class FormGeneral extends React.Component {
 
           <br/>
           <TextField
+            sx={{mb: "1rem"}}
             placeholder="Prénom"
             type="text"
             name="prenom"
@@ -67,6 +68,8 @@ class FormGeneral extends React.Component {
           />
 
           <br/>
+
+          <FormLabel component="legend" sx={{mb: "-0.5rem"}}>Date de naissance</FormLabel>
           <TextField
             placeholder="Date de naissance"
             type="date"
