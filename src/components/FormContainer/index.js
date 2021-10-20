@@ -6,7 +6,6 @@ import Form2 from "../Form2";
 import Form3 from "../Form3";
 import FormConfirmation from "../FormConfirmation";
 
-
 class FormContainer extends React.Component {
 
   //On définit le component FormContainer ainsi que les props

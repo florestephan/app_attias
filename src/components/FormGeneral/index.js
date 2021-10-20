@@ -14,7 +14,7 @@ import {
   Container,
   Box
 } from '@mui/material/';
-
+import {Link} from 'react-router-dom';
 
 class FormGeneral extends React.Component {
 
@@ -36,10 +36,14 @@ class FormGeneral extends React.Component {
             <AppBar position="static">
               <Toolbar>
                 <Typography variant="h6" component="div" sx={{flexGrow: 1}}>
-                  Questionnaire salle d'attente
+                  <Link to="/">Questionnaire salle d'attente</Link>
                 </Typography>
                 <Typography component="div" sx={{flexGrow: 1}}>
                   Informations générales
+                </Typography>
+
+                <Typography>
+                  <Link to="/docteur" color="inherit" sx={{textAlign: "left"}}>Espace Docteur</Link>
                 </Typography>
               </Toolbar>
             </AppBar>
