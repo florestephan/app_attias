@@ -44,7 +44,13 @@ class Auth extends React.Component {
               alignItems: 'center',
               minHeight: '83vh'
             }}>
-            <AccountCircleIcon/>
+            <AccountCircleIcon
+              sx={{
+                fontSize: "4rem",
+                position: "relative",
+                top: "30px",
+                color: "#1976d2"
+              }}/>
 
             <Card
               sx={{
@@ -54,7 +60,7 @@ class Auth extends React.Component {
                 flexDirection: 'column',
                 justifyContent: 'center',
                 alignItems: 'center',
-                bgcolor: '#e1edff'
+                bgcolor: '#f7faff'
               }}>
               <CardContent sx={{
                 display: 'flex',
