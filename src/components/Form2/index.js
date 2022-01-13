@@ -238,7 +238,7 @@ class Form2 extends React.Component {
                     onChange={handleChange('sensation_soudaines_de_panique')}
                     defaultValue={values.sensation_soudaines_de_panique}>
           <FormControlLabel labelPlacement="top" value="0" control={<Radio/>}
-                            label="Pas très souvent"/>
+                            label="Jamais"/>
           <FormControlLabel labelPlacement="top" value="1" control={<Radio/>}
                             label="Pas très souvent"/>
           <FormControlLabel labelPlacement="top" value="2" control={<Radio/>}
