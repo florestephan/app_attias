@@ -1,4 +1,6 @@
 import React from 'react';
+import Logout from '../Logout';
+import FormResults from '../FormResults';
 import {
   TextField,
   Typography,
@@ -33,6 +35,8 @@ const Welcome = () => {
           </Toolbar>
         </AppBar>
       </header>
+      <Logout/>
+      <FormResults/>
     </Container>
   )
 };
