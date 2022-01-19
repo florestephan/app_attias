@@ -27,8 +27,11 @@ class Firebase {
   //Deconnexion
   signoutUser = () => this.auth.signOut();
 
-  //Db
+  //write Db
   user = uid => this.db.doc(`forms/${uid}`)
+
+  //Read db
+  data = (forms) => this.db.collection(forms)
 
 }
 
