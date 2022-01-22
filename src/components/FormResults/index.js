@@ -9,7 +9,9 @@ import ExportReactCSV from "src/components/ExportReactCSV";
 const FormResults = () => {
   const firebase = useContext(FirebaseContext);
   const [data, setData] = useState({});
+  const [arrayData, setArray] = useState({});
 
+  const array = [];
 
   useEffect(() => {
     firebase.data('forms').get()
@@ -17,6 +19,8 @@ const FormResults = () => {
         doc.forEach((doc) => {
           const myData = doc.data();
           setData(myData)
+          array.push(myData)
+          setArray(array)
         })
       });
   }, [])
@@ -44,33 +48,32 @@ const FormResults = () => {
 
   ];
 
-data.push
 
   function customersData() {
 
 
     const custs = [];
-    for (let i = 0; i <= 0; i++) {
+    for (let i = 0; i <= arrayData.length; i++) {
       custs[i] = {
-        firstName: `${data.firstname}`,
-        lastName: `${data.lastname}`,
-        dob: `${data.dob}`,
-        sexe: `${data.sexe}`,
-        fumeur: `${data.fumeur}`,
-        sleep_alone: `${data.sleep_alone}`,
-        job: `${data.job}`,
-        ronflement: `${data.ronflement}`,
-        head_sick: `${data.head_sick}`,
-        breathe_break: `${data.breathe_break}`,
-        pee_night: `${data.pee_night}`,
-        memory_issue: `${data.memory_issue}`,
-        nervous_day: `${data.nervous_day}`,
-        sleep_well: `${data.sleep_well}`,
-        sleep_drive: `${data.sleep_drive}`,
-        car_accident: `${data.car_accident}`,
-        pichot: `${data.pichot}`,
-        had: `Total A : ${data.hadA} & Total D ${data.hadD}: `,
-        epworth: `${data.epworth}`
+        firstName: `${arrayData[i].firstname}`,
+        lastName: `${arrayData[i].lastname}`,
+        dob: `${arrayData[i].dob}`,
+        sexe: `${arrayData[i].sexe}`,
+        fumeur: `${arrayData[i].fumeur}`,
+        sleep_alone: `${arrayData[i].sleep_alone}`,
+        job: `${arrayData[i].job}`,
+        ronflement: `${arrayData[i].ronflement}`,
+        head_sick: `${arrayData[i].head_sick}`,
+        breathe_break: `${arrayData[i].breathe_break}`,
+        pee_night: `${arrayData[i].pee_night}`,
+        memory_issue: `${arrayData[i].memory_issue}`,
+        nervous_day: `${arrayData[i].nervous_day}`,
+        sleep_well: `${arrayData[i].sleep_well}`,
+        sleep_drive: `${arrayData[i].sleep_drive}`,
+        car_accident: `${arrayData[i].car_accident}`,
+        pichot: `${arrayData[i].pichot}`,
+        had: `Total A : ${arrayData[i].hadA} & Total D ${arrayData[i].hadD}: `,
+        epworth: `${arrayData[i].epworth}`
       };
     }
     return custs;
