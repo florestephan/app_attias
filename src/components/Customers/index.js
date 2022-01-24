@@ -31,6 +31,7 @@ const Index = ({customers}) => {
     </thead>
   );
 
+
   // table row construction
   const CustomerRow = (customer, index) => (
     <tr key={index} className="even">
