@@ -32,7 +32,7 @@ const FormResults = () => {
 
     setTimeout(() => {
       setLoading(false)
-    }, 500)
+    }, 1000)
 
   }, []);
 
@@ -85,7 +85,7 @@ const FormResults = () => {
         sleep_drive: `${arrayData[i].sleep_drive}`,
         car_accident: `${arrayData[i].car_accident}`,
         pichot: `${arrayData[i].pichot}`,
-        had: `Total A : ${arrayData[i].hadA} & Total D ${arrayData[i].hadD}: `,
+        had: `Total A : ${arrayData[i].hadA} & Total D ${arrayData[i].hadD} `,
         epworth: `${arrayData[i].epworth}`
       };
     }

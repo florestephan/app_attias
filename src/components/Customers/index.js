@@ -58,7 +58,7 @@ const Index = ({customers}) => {
       <td>{customer.sleep_drive}</td>
       <td>{customer.car_accident}</td>
       <td>{customer.pichot}</td>
-      <td>Total A : {customer.hadA} & Total D : {customer.hadD} </td>
+      <td>{customer.had}</td>
       <td>{customer.epworth}</td>
     </tr>
   );
