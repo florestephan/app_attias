@@ -1,5 +1,6 @@
-import React, {useState, useContext, useEffect, useLayoutEffect} from 'react';
+import React, {useState, useContext, useEffect, Fragment} from 'react';
 import {FirebaseContext} from '../Firebase';
+
 
 import Header from "src/components/Header";
 import Customers from "src/components/Customers";
@@ -12,9 +13,10 @@ const FormResults = () => {
   const [data, setData] = useState({});
   const [arrayData, setArray] = useState({});
 
+  const [loading, setLoading] = useState(true);
   const array = [];
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     firebase.data('forms').get()
       .then((doc) => {
         doc.forEach((doc) => {
@@ -24,7 +26,16 @@ const FormResults = () => {
           setArray(array)
         })
       });
-  }, [arrayData])
+  }, [])
+
+  useEffect(() => {
+
+    setTimeout(() => {
+      setLoading(false)
+    }, 500)
+
+  }, []);
+
 
   const headers = [
     {label: "Prénom", key: "firstName"},
@@ -49,56 +60,33 @@ const FormResults = () => {
 
   ];
 
-  let newArray = [];
-
-  for (let i = 0; i < arrayData.length; i++) {
-    newArray.push(arrayData[i].firstname);
-    newArray.push(arrayData[i].lastname);
-    newArray.push(arrayData[i].dob);
-    newArray.push(arrayData[i].sexe);
-    newArray.push(arrayData[i].fumeur);
-    newArray.push(arrayData[i].sleep_alone);
-    newArray.push(arrayData[i].job);
-    newArray.push(arrayData[i].ronflement);
-    newArray.push(arrayData[i].head_sick);
-    newArray.push(arrayData[i].breathe_break);
-    newArray.push(arrayData[i].pee_night);
-    newArray.push(arrayData[i].memory_issue);
-    newArray.push(arrayData[i].nervous_day);
-    newArray.push(arrayData[i].sleep_well);
-    newArray.push(arrayData[i].sleep_drive);
-    newArray.push(arrayData[i].car_accident);
-    newArray.push(arrayData[i].pichot);
-    newArray.push(arrayData[i].hadA);
-    newArray.push(arrayData[i].hadD);
-    newArray.push(arrayData[i].epworth);
-  }
-
 
   function customersData() {
 
     const custs = [];
+
     for (let i = 0; i < arrayData.length; i++) {
+
       custs[i] = {
         firstName: `${arrayData[i].firstname}`,
         lastName: `${arrayData[i].lastname}`,
-        dob: `${newArray[2]}`,
-        sexe: `${newArray[3]}`,
-        fumeur: `${newArray[4]}`,
-        sleep_alone: `${newArray[5]}`,
-        job: `${newArray[6]}`,
-        ronflement: `${newArray[7]}`,
-        head_sick: `${newArray[8]}`,
-        breathe_break: `${newArray[9]}`,
-        pee_night: `${newArray[10]}`,
-        memory_issue: `${newArray[11]}`,
-        nervous_day: `${newArray[12]}`,
-        sleep_well: `${newArray[13]}`,
-        sleep_drive: `${newArray[14]}`,
-        car_accident: `${newArray[15]}`,
-        pichot: `${newArray[16]}`,
-        had: `Total A : ${newArray[17]} & Total D ${newArray[18]}: `,
-        epworth: `${newArray[19]}`
+        dob: `${arrayData[i].dob}`,
+        sexe: `${arrayData[i].sexe}`,
+        fumeur: `${arrayData[i].fumeur}`,
+        sleep_alone: `${arrayData[i].sleep_alone}`,
+        job: `${arrayData[i].job}`,
+        ronflement: `${arrayData[i].ronflement}`,
+        head_sick: `${arrayData[i].head_sick}`,
+        breathe_break: `${arrayData[i].breathe_break}`,
+        pee_night: `${arrayData[i].pee_night}`,
+        memory_issue: `${arrayData[i].memory_issue}`,
+        nervous_day: `${arrayData[i].nervous_day}`,
+        sleep_well: `${arrayData[i].sleep_well}`,
+        sleep_drive: `${arrayData[i].sleep_drive}`,
+        car_accident: `${arrayData[i].car_accident}`,
+        pichot: `${arrayData[i].pichot}`,
+        had: `Total A : ${arrayData[i].hadA} & Total D ${arrayData[i].hadD}: `,
+        epworth: `${arrayData[i].epworth}`
       };
     }
     return custs;

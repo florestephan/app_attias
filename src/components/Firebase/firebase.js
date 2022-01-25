@@ -31,6 +31,7 @@ class Firebase {
   user = uid => this.db.doc(`forms/${uid}`)
 
   //Read db
+  //data = (forms) => this.db.collection(forms)
   data = (forms) => this.db.collection(forms)
 
 }
