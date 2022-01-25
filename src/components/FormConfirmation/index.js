@@ -20,6 +20,7 @@ import {
   ListItem,
   ListItemText
 } from '@mui/material/';
+import {Link} from "react-router-dom";
 
 const FormConfirmation = (props) => {
 
@@ -53,6 +54,9 @@ const FormConfirmation = (props) => {
             <Typography component="div" sx={{flexGrow: 1}}>
               Confirmaton
             </Typography>
+            <Typography>
+              <Link to="/docteur" color="inherit" sx={{textAlign: "left"}}>Espace Docteur</Link>
+            </Typography>
           </Toolbar>
         </AppBar>
       </header>
@@ -60,27 +64,15 @@ const FormConfirmation = (props) => {
       <br/>
 
       <Typography variant="body1">Merci pour vos réponses !</Typography>
+      <Box textAlign='center'>
+        <Button sx={{mb: "1rem"}}
+                color="primary"
+                variant="contained"
+                href="/">
+          Retourner au formulaire
+        </Button>
 
-      <Typography variant="body1">{values.nom_de_famille}</Typography>
-      <Typography variant="body1">{values.prenom}</Typography>
-      <Typography variant="body1">{values.date_de_naissance}</Typography>
-      <Typography variant="body1">{values.sexe}</Typography>
-      <Typography variant="body1">{values.tabac}</Typography>
-      <Typography variant="body1">{values.dormir_seul}</Typography>
-      <Typography variant="body1">{values.job}</Typography>
-      <Typography variant="body1">{values.ronflement}</Typography>
-      <Typography variant="body1">{values.maux_de_tete}</Typography>
-      <Typography variant="body1">{values.pause_respiratoire}</Typography>
-      <Typography variant="body1">{values.uriner_nuit}</Typography>
-      <Typography variant="body1">{values.probleme_memoire}</Typography>
-      <Typography variant="body1">{values.irritable}</Typography>
-      <Typography variant="body1">{values.sommeil_reparateur}</Typography>
-      <Typography variant="body1">{values.somnolance_volant}</Typography>
-      <Typography variant="body1">{values.accident_endormissement_volant}</Typography>
-      <Typography variant="body1">Pichot score = {pichot}</Typography>
-      <Typography variant="body1">HAD score = Total A = {hadA} & Total D = {hadD}</Typography>
-      <Typography variant="body1">Epworth score = {epworth}</Typography>
-
+      </Box>
     </Container>
   );
 }

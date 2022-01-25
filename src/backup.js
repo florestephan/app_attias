@@ -1,4 +1,5 @@
-import {useEffect} from "react";
+import React, {useEffect} from "react";
+import {Typography} from "./components/FormConfirmation";
 
 let newArray = [];
 
@@ -58,3 +59,24 @@ useEffect(() => {
   fetchData();
 
 }, []);
+
+
+<Typography variant="body1">{values.nom_de_famille}</Typography>
+<Typography variant="body1">{values.prenom}</Typography>
+<Typography variant="body1">{values.date_de_naissance}</Typography>
+<Typography variant="body1">{values.sexe}</Typography>
+<Typography variant="body1">{values.tabac}</Typography>
+<Typography variant="body1">{values.dormir_seul}</Typography>
+<Typography variant="body1">{values.job}</Typography>
+<Typography variant="body1">{values.ronflement}</Typography>
+<Typography variant="body1">{values.maux_de_tete}</Typography>
+<Typography variant="body1">{values.pause_respiratoire}</Typography>
+<Typography variant="body1">{values.uriner_nuit}</Typography>
+<Typography variant="body1">{values.probleme_memoire}</Typography>
+<Typography variant="body1">{values.irritable}</Typography>
+<Typography variant="body1">{values.sommeil_reparateur}</Typography>
+<Typography variant="body1">{values.somnolance_volant}</Typography>
+<Typography variant="body1">{values.accident_endormissement_volant}</Typography>
+<Typography variant="body1">Pichot score = {pichot}</Typography>
+<Typography variant="body1">HAD score = Total A = {hadA} & Total D = {hadD}</Typography>
+<Typography variant="body1">Epworth score = {epworth}</Typography>

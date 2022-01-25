@@ -1,4 +1,4 @@
-import React, {useState, useContext} from 'react';
+import React, {useState, useContext, useEffect, Fragment} from 'react';
 import {Link} from "react-router-dom";
 import {FirebaseContext} from '../Firebase';
 
@@ -18,6 +18,7 @@ import {
   Alert
 } from "@mui/material/";
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import Welcome from "../Welcome";
 
 const Auth = (props) => {
 
@@ -45,7 +46,21 @@ const Auth = (props) => {
       })
   };
 
-  return (
+
+  const [userSession, setUserSession] = useState(null);
+
+  useEffect(() => {
+
+    let listener = firebase.auth.onAuthStateChanged(user => {
+      user ? setUserSession(user) : props.history.push('/docteur');
+
+    })
+    return () => {
+      listener();
+    };
+  }, [])
+
+  return userSession === null ? (
     <Container>
       <header>
         <AppBar position="static">
@@ -123,7 +138,8 @@ const Auth = (props) => {
         </Box>
       </form>
     </Container>
-
+  ) : (
+    <Welcome/>
   )
 }
 

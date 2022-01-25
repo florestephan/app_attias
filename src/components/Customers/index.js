@@ -1,13 +1,9 @@
 import React from "react";
-import {useState, useEffect} from 'react';
 import {Table} from "react-bootstrap";
 
 
 // 3. create customers table component
 const Index = ({customers}) => {
-
-  console.log(customers)
-
   // table header
   const TableHeader = (
     <thead className="bgvi">

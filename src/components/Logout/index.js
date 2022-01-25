@@ -13,6 +13,7 @@ const Logout = () => {
     if (checked) {
       console.log('Logout')
       firebase.signoutUser();
+      location.reload();
     }
   }, [checked, firebase]);
 
@@ -20,6 +21,7 @@ const Logout = () => {
   const handleChange = event => {
     setChecked(event.target.checked);
   };
+
 
   return (
     <Box sx={{'& > button': {m: 1}}}>

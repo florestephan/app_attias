@@ -31,8 +31,7 @@ const Welcome = props => {
   useEffect(() => {
 
     let listener = firebase.auth.onAuthStateChanged(user => {
-      user ? setUserSession(user) : props.history.push('/');
-
+      user ? setUserSession(user) : props.history.push('/docteur');
     })
 
     return () => {
