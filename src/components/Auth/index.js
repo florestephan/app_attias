@@ -130,7 +130,7 @@ const Auth = (props) => {
 
             </CardContent>
             <CardActions>
-              <Button onClick={handleSubmit} type="button" variant="contained">
+              <Button onClick={handleSubmit} type="submit" variant="contained">
                 Connexion
               </Button>
             </CardActions>
