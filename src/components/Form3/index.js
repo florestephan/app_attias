@@ -42,6 +42,73 @@ const Form3 = (props) => {
     parseInt(values.passager_dans_une_voiture, 10) + parseInt(values.allonge_en_apres_midi, 10) + parseInt(values.assis_en_parlant_avec_une_personne, 10) +
     parseInt(values.assis_apres_un_dejeuner_sans_alcool, 10) + parseInt(values.immobilise_dans_une_voiture, 10);
 
+  if (values.sexe === "homme") {
+    values.sexe = "1"
+  } else if (values.sexe === "femme") {
+    values.sexe = "0"
+  }
+
+  if (values.tabac === "oui") {
+    values.tabac = "1"
+  } else if (values.tabac === "non") {
+    values.tabac = "0"
+  }
+
+  if (values.dormir_seul === "oui") {
+    values.dormir_seul = "1"
+  } else if (values.dormir_seul === "non") {
+    values.dormir_seul = "0"
+  }
+
+  if (values.ronflement === "oui") {
+    values.ronflement = "1"
+  } else if (values.ronflement === "non") {
+    values.ronflement = "0"
+  }
+
+  if (values.maux_de_tete === "oui") {
+    values.maux_de_tete = "1"
+  } else if (values.maux_de_tete === "non") {
+    values.maux_de_tete = "0"
+  }
+
+  if (values.pause_respiratoire === "oui") {
+    values.pause_respiratoire = "1"
+  } else if (values.pause_respiratoire === "non") {
+    values.pause_respiratoire = "0"
+  }
+
+  if (values.probleme_memoire === "oui") {
+    values.probleme_memoire = "1"
+  } else if (values.probleme_memoire === "non") {
+    values.probleme_memoire = "0"
+  }
+
+  if (values.irritable === "oui") {
+    values.irritable = "1"
+  } else if (values.irritable === "non") {
+    values.irritable = "0"
+  }
+
+  if (values.sommeil_reparateur === "oui") {
+    values.sommeil_reparateur = "1"
+  } else if (values.sommeil_reparateur === "non") {
+    values.sommeil_reparateur = "0"
+  }
+
+  if (values.somnolance_volant === "oui") {
+    values.somnolance_volant = "1"
+  } else if (values.somnolance_volant === "non") {
+    values.somnolance_volant = "0"
+  }
+
+  if (values.accident_endormissement_volant === "oui") {
+    values.accident_endormissement_volant = "1"
+  } else if (values.accident_endormissement_volant === "non") {
+    values.accident_endormissement_volant = "0"
+  }
+
+
   const continued = e => {
 
     firebase.user(Date.now()).set({
