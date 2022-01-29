@@ -48,15 +48,13 @@ const Index = ({csvData, fileName, wscols}) => {
 
   const exportToCSV = (csvData, fileName, wscols) => {
     const ws = XLSX.utils.json_to_sheet(Heading, {
-      header: ["Prénom", "Nom de famille", "Date de naissance", "Sexe", "Fumeur", "Dormez-vous seul(e) ?", "Profession", "Ronflement", "Maux de tête le matin ?", "Pauses respiratoires la nuit", "Urines/nuit", "Problèmes de concentration/ de mémoire la journée ?", "Irritable la journée ?", "Sommeil est réparateur ?", "Somnolence au volant ?", "Accident lié à un endormissement au volant ?", "Échelle de fatigue de Pichot", "Échelle HAD : Hospital Anxiety and Depression scale", "Échelle de somnolence d'epworth"],
       skipHeader: true,
       origin: 0 //ok
     });
     ws["!cols"] = wscols;
     XLSX.utils.sheet_add_json(ws, csvData, {
-      header: ["Prénom", "Nom de famille", "Date de naissance", "Sexe", "Fumeur", "Dormez-vous seul(e) ?", "Profession", "Ronflement", "Maux de tête le matin ?", "Pauses respiratoires la nuit", "Urines/nuit", "Problèmes de concentration/ de mémoire la journée ?", "Irritable la journée ?", "Sommeil est réparateur ?", "Somnolence au volant ?", "Accident lié à un endormissement au volant ?", "Échelle de fatigue de Pichot", "Échelle HAD : Hospital Anxiety and Depression scale", "Échelle de somnolence d'epworth"],
       skipHeader: true,
-      origin: -1 //ok
+      origin: -1, //ok
     });
     const wb = {Sheets: {data: ws}, SheetNames: ["data"]};
     const excelBuffer = XLSX.write(wb, {bookType: "xlsx", type: "array"});
